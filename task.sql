@@ -9,7 +9,7 @@ CREATE TABLE Countries (
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE Warehouse (
+CREATE TABLE Warehouses (
     ID INT AUTO_INCREMENT,
     Name VARCHAR(50),
     Address VARCHAR(50),
@@ -18,7 +18,7 @@ CREATE TABLE Warehouse (
     FOREIGN KEY (CountryID) REFERENCES Countries(ID) ON DELETE NO ACTION
 );
 
-CREATE TABLE Product (
+CREATE TABLE Products (
     ID INT AUTO_INCREMENT,
     Name VARCHAR(50),
     PRIMARY KEY (ID)
@@ -38,9 +38,9 @@ CREATE TABLE ProductInventory (
 
 INSERT INTO Countries (Name) VALUES ('Country1'), ('Country2');
 
-INSERT INTO Product (Name) VALUES ('AwersomeProduct');
+INSERT INTO Products (Name) VALUES ('AwersomeProduct');
 
-INSERT INTO Warehouse (Name, Address, CountryID)
+INSERT INTO Warehouses (Name, Address, CountryID)
 VALUES
     ('Warehouse-1', 'City-1, Street-1', 1),
     ('Warehouse-2', 'City-2, Street-2', 2);
